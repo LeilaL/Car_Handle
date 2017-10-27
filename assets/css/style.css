@@ -1,0 +1,15 @@
+#footer, #header {
+  background-color: #546E7A;
+}
+
+#button {
+  margin: 15px 0 0 15px;
+}
+
+strong {
+  color: #fb8c00;
+}
+
+#return{
+  margin-left: 20px;
+}
