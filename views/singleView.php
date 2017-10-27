@@ -2,7 +2,7 @@
 include("template/header.php");
 ?>
 
-  <!--  VEHICLE CARD DETAIL -->
+  <!--  VEHICLE CARD DETAILS -->
   <div class="row">
     <a id="button" class="waves-effect btn-large orange darken-1" href="">Ajouter un véhicule</a></p>
     <div class="col s12 m6 offset-m3 l6 offset-l3">

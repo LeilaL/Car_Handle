@@ -14,15 +14,13 @@ include('template/header.php');
         <label for="type">Type de véhicule</label>
       </div> -->
       <p>Type de véhicule</p>
-      <p>
+<p>
            <input class="with-gap" name="group1" type="radio" value="voiture" id="test1" />
            <label for="test1">Voiture</label>
-         </p>
-         <p>
+
            <input class="with-gap" name="group1" type="radio" value="camion" id="test2" />
            <label for="test2">Camion</label>
-         </p>
-         <p>
+
            <input class="with-gap" name="group1" type="radio" value="moto" id="test3"  />
            <label for="test3">Moto</label>
          </p>
