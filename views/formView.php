@@ -3,35 +3,30 @@ include('template/header.php');
 ?>
 
   <h5 class="header center-align">Formulaire Ajout Véhicule</h5>
-  <a href="indexView.php" id="return"><strong>Retour</strong></a>
+  <a href="index.php" id="return"><strong>Retour</strong></a>
   <div id="form" class="container">
   <div class="row">
 
-    <form class="col s12" action="../controller/index.php" method="post">
-
-      <!-- <div class="input-field col s7">
-        <input id="type" name="type" type="text" class="validate">
-        <label for="type">Type de véhicule</label>
-      </div> -->
+    <form class="col s12" action="../controllers/index.php" method="post">
       <p>Type de véhicule</p>
 <p>
-           <input class="with-gap" name="group1" type="radio" value="voiture" id="test1" />
+           <input class="with-gap" name="type" type="radio" value="voiture" id="test1" />
            <label for="test1">Voiture</label>
 
-           <input class="with-gap" name="group1" type="radio" value="camion" id="test2" />
+           <input class="with-gap" name="type" type="radio" value="camion" id="test2" />
            <label for="test2">Camion</label>
 
-           <input class="with-gap" name="group1" type="radio" value="moto" id="test3"  />
+           <input class="with-gap" name="type" type="radio" value="moto" id="test3"  />
            <label for="test3">Moto</label>
          </p>
 
       <div class="input-field col s12 m10 l7">
-        <input id="text1" name="marque" type="text" class="validate">
+        <input id="text1" name="brand" type="text" class="validate">
         <label for="text1">Marque</label>
       </div>
 
       <div class="input-field col s12 m10 l7">
-        <input id="year" name="year" type="date" class="validate">
+        <input id="year" name="year" type="text" class="validate">
         <label for="year">Année</label>
       </div>
 

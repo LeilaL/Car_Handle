@@ -2,7 +2,7 @@
             <div class="container">
               <div class="row">
                 <div class="col l12 s12">
-                  <h5 class="white-text ">Footer Content</h5>
+                  <h5 class="white-text ">Footer</h5>
                 </div>
               </div>
             </div>
