@@ -5,7 +5,7 @@ function loadClass($class) {
 }
 spl_autoload_register("loadClass");
 
-// $mon_chien = new Chien("fifi", 5, "long");
+$the_vehicle = new Vehicle();
 
 include "../views/indexVue.php";
  ?>

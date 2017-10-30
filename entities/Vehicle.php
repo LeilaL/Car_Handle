@@ -11,8 +11,8 @@ const COLOR = [
   1 => "noir",
   2 => "gris",
   3 => "blanc",
-  4 => "roux",
-  5 => "marron"
+  4 => "rouge",
+  5 => "bleu"
 ];
 
 // SETTERS
@@ -52,7 +52,7 @@ const COLOR = [
   }
 
 
-  // METHODS  
+  // METHODS
   public function hydrate($data){
     foreach ($data as $key => $value) {
       $method = "set" .ucfirst($key);
