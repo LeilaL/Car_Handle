@@ -10,15 +10,10 @@ spl_autoload_register("loadClass");
 // INSTANTIATION OF VehicleManager
 $vehicleManager = new VehicleManager();
 
-// $type_vehicle = ucfirst($_POST['type']);
-// $vehicle = new $type_vehicle($_POST);
-// $vehicleManager->insertVehicles($vehicle);
-
+// WORK WITH GET
 if (!empty($_GET['join'])) {
   $id =(int) $_GET['join'];
   $singleVehicle = $vehicleManager->getVehicle($id);
-
-  // $car = new Car($singleVehicle);
 }
 
 // FOREACH FOR SHOW INFOS
