@@ -10,14 +10,10 @@ spl_autoload_register("loadClass");
 
 // INSTANTIATION OF VehicleManager
 $vehicleManager = new VehicleManager();
-// faire les verifs ici / securisation bdd htmlspecialchars
 
-// INSTANTIATIONOF THE RIGHT CLASS + INSERT IN BDD
 
-// $vehicle = new Car(
-// 'brand' => $_POST['brand'],
-// 'year' => $_POST['year'],
-// 'color' => $_POST['color']]);
+
+// INSTANTIATION OF THE RIGHT CLASS + INSERT IN BDD
 if (!empty($_POST)) {
 $type_vehicle = ucfirst($_POST['type']);
 $vehicle = new $type_vehicle($_POST);
@@ -28,6 +24,12 @@ $vehicleManager->insertVehicles($vehicle);
 $show_vehicles= $vehicleManager->getAllVehicles();
 foreach ($show_vehicles as $key => $value) {
   $show_vehicles[$key] = new Car($value);
+}
+
+// DELETE
+if(isset($_GET['delete'])){
+  $id_delete=$_GET['delete'];
+  $donnees = $vehicleManager->deleteVehicle($id_delete);
 }
 
 include "../views/indexView.php";

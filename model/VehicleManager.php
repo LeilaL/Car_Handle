@@ -29,11 +29,32 @@ $vehicles=$response->fetchAll(PDO::FETCH_ASSOC);
 return $vehicles;
 }
 
+// SELECT ALL FROM VEHICLES TABLE
+public function getVehicle($id){
+$response=$this->getBdd()->prepare("SELECT * FROM vehicles WHERE id=:id");
+$response->bindValue('id', $id, PDO::PARAM_INT);
+$response->execute();
+$vehicle=$response->fetch(PDO::FETCH_ASSOC);
+$name_Class=ucfirst($vehicle['type']);
+return new $name_Class($vehicle);
+}
+
 // UPDATE INFOS IN BDD
+function updateVehicle($idp){
+  $req=$this->getBdd()->prepare("UPDATE vehicles WHERE vehicles.id = :id");
+  $req->bindValue('id', $idp, PDO::PARAM_INT);
+  $req->execute();
+}
 
 
+// DELETE INFOS
+function deleteVehicle($id_delete) {
+$req=$this->getBdd()->prepare('DELETE FROM vehicles WHERE vehicles.id= :id');
+$req->bindValue(':id', $id_delete, PDO::PARAM_INT);
+$req ->execute();
+}
 
-// DELETE INFOS 
+
 
 }
 

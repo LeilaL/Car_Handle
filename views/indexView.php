@@ -19,7 +19,9 @@
                <p><?php echo $infosvehicle->getColor()?></p>
              </div>
              <div class="card-action">
-               <a href="single.php?join=<?php echo $infosvehicle->getId()?>">Voir le véhicule détaillé</a>
+               <a href="single.php?join=<?php echo $infosvehicle->getId()?>">Voir</a>
+               <a href="#modal<?php echo $infosvehicle->getId();?>">Éditer</a>
+               <a href="index.php?delete=<?php echo $value['id'];?>">Supprimer</a>
              </div>
            </div>
          </div>
@@ -28,6 +30,51 @@
          ?>
      </div>
    </div>
+
+<!-- ==================================== -->
+<!-- Modal Form EDIT -->
+<div id="modal<?php echo $infosvehicle->getId();?>" class="modal">
+  <div class="modal-content">
+  <form class="col s12" action="index.php" method="post">
+
+    <!-- BUTTONS RADIO -->
+    <p>Type de véhicule</p>
+     <p>
+         <input class="with-gap" name="type" type="radio" value="<?php echo $infosvehicle->getType()?>" id="test1" />
+         <label for="test1">Voiture</label>
+
+         <input class="with-gap" name="type" type="radio" value="<?php echo $infosvehicle->getType()?>" id="test2" />
+         <label for="test2">Camion</label>
+
+         <input class="with-gap" name="type" type="radio" value="<?php echo $infosvehicle->getType()?>" id="test3"  />
+         <label for="test3">Moto</label>
+       </p>
+       <!-- END OF BUTTONS RADIO-->
+
+    <div class="input-field col s12 m10 l7">
+      <input id="text1" name="brand" value="<?php echo $infosvehicle->getBrand()?>" type="text" class="validate">
+      <label for="text1">Marque</label>
+    </div>
+
+    <div class="input-field col s12 m10 l7">
+      <input id="year" name="year" value="<?php echo $infosvehicle->getYear()?>" type="text" class="validate">
+      <label for="year">Année</label>
+    </div>
+
+    <div class="input-field col s12 m10 l7">
+      <input id="text2" name="color" value="<?php echo $infosvehicle->getColor()?>" type="text" class="validate">
+      <label for="text2">Couleur</label>
+    </div>
+
+    <div class="input-field col s10">
+      <input type="hidden" name="" value="<?php echo $infosvehicle->getId()?>">
+      <input class="waves-effect btn orange darken-1" value="Envoyer" type="submit" >
+    </div>
+
+  </form>
+  </div>
+</div>
+<!-- End Form EDIT -->
 
 
  </main>
