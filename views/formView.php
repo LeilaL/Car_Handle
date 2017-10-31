@@ -7,18 +7,21 @@ include('template/header.php');
   <div id="form" class="container">
   <div class="row">
 
-    <form class="col s12" action="../controllers/index.php" method="post">
+    <form class="col s12" action="index.php" method="post">
+
+      <!-- BUTTONS RADIO -->
       <p>Type de véhicule</p>
 <p>
-           <input class="with-gap" name="type" type="radio" value="voiture" id="test1" />
+           <input class="with-gap" name="type" type="radio" value="car" id="test1" />
            <label for="test1">Voiture</label>
 
-           <input class="with-gap" name="type" type="radio" value="camion" id="test2" />
+           <input class="with-gap" name="type" type="radio" value="truck" id="test2" />
            <label for="test2">Camion</label>
 
-           <input class="with-gap" name="type" type="radio" value="moto" id="test3"  />
+           <input class="with-gap" name="type" type="radio" value="bike" id="test3"  />
            <label for="test3">Moto</label>
          </p>
+         <!-- END OF BUTTONS RADIO-->
 
       <div class="input-field col s12 m10 l7">
         <input id="text1" name="brand" type="text" class="validate">
@@ -36,15 +39,13 @@ include('template/header.php');
       </div>
 
       <div class="input-field col s10">
-        <input class="waves-effect btn orange darken-1" value="Envoyer" type="submit" name="action">
+        <input class="waves-effect btn orange darken-1" value="Envoyer" type="submit" >
       </div>
 
     </form>
 
   </div>
 </div>
-
-
 
 
 

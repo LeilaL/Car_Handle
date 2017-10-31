@@ -12,10 +12,10 @@ class VehicleManager {
 
 // INSERT VEHICLES IN BDD
   public function insertVehicles(vehicle $v){
-    $req=$this->getBdd()->prepare('INSERT INTO vehicles(type, brand, year, color)
-    VALUES(:type, :brand, :year, :color)');
-    // $req->bindValue(':id', getId());
-      $req->bindValue(':type', $v->getType());
+    $req=$this->getBdd()->prepare('INSERT INTO vehicles(id, type, brand, year, color)
+    VALUES(:id, :type, :brand, :year, :color)');
+    $req->bindValue(':id', $v->getId());
+      $req->bindValue(':type', $v->getType(), PDO::PARAM_STR);
       $req->bindValue(':brand', $v->getBrand(), PDO::PARAM_STR);
  $req->bindValue(':year', $v->getYear(), PDO::PARAM_INT);
  $req->bindValue(':color', $v->getColor(), PDO::PARAM_STR);
@@ -29,7 +29,11 @@ $vehicles=$response->fetchAll(PDO::FETCH_ASSOC);
 return $vehicles;
 }
 
+// UPDATE INFOS IN BDD
 
+
+
+// DELETE INFOS 
 
 }
 

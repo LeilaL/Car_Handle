@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 abstract class Vehicle {
+  protected $id;
   protected $type;
   protected $brand;
   protected $year;
@@ -16,6 +17,10 @@ const COLOR = [
 ];
 
 // SETTERS
+public function setId($id) {
+    $this->id = $id;
+}
+
   public function setType($type) {
       $this->type = $type;
   }
@@ -34,6 +39,10 @@ const COLOR = [
 
 
   // GETTERS
+
+  public function getId() {
+    return $this->id;
+  }
 
   public function getType() {
     return $this->type;

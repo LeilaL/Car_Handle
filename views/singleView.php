@@ -3,7 +3,7 @@ include("template/header.php");
 ?>
 
 <?php
-foreach ($vehicles as $vehicle) {
+foreach ($show_vehicles as $infosvehicle) {
   ?>
 
   <!--  VEHICLE CARD DETAILS -->
@@ -13,10 +13,10 @@ foreach ($vehicles as $vehicle) {
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title"><strong>Projet</strong></span>
-          <span class="card-title"><?php echo $vehicle->getType()?></span>
-          <p><?php echo $vehicle->getBrand()?></p>
-          <p><?php echo $vehicle->getYear()?></p>
-          <p><?php echo $vehicle->getColor()?></p>
+          <span class="card-title"><?php echo $infosvehicle->getType()?></span>
+          <p><?php echo $infosvehicle->getBrand()?></p>
+          <p><?php echo $infosvehicle->getYear()?></p>
+          <p><?php echo $infosvehicle->getColor()?></p>
         </div>
         <div class="card-action">
           <a href="../view/formSubstep_View.php?">Supprimer ou Éditer</a>
