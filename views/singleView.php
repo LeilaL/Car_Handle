@@ -5,9 +5,9 @@ include("template/header.php");
 
   <!--  VEHICLE CARD DETAILS -->
   <div class="row">
-    <a id="button" class="waves-effect btn-large orange darken-1" href="form.php">Ajouter un véhicule</a></p>
+    <a id="button" class="waves-effect btn-large teal lighten-3" href="form.php">Ajouter un véhicule</a></p>
     <div class="col s12 m6 offset-m3 l6 offset-l3">
-      <div class="card blue-grey darken-1">
+      <div class="card teal darken-4">
         <div class="card-content white-text">
           <span class="card-title"><strong>Véhicule</strong></span>
           <span class="card-title"><?php echo $singleVehicle->getType()?></span>
@@ -16,8 +16,8 @@ include("template/header.php");
           <p><?php echo $singleVehicle->getColor()?></p>
         </div>
         <div class="card-action">
-          <a class="waves-effect btn-large orange darken-1 modal-trigger" href="#modal<?php echo $singleVehicle->getId();?>">Éditer</a>
-          <a class="waves-effect btn-large orange darken-1 modal-trigger" href="index.php?delete=<?php echo $value['id'];?>">Supprimer</a>
+          <a class="waves-effect btn-large teal lighten-3 modal-trigger" href="#modal<?php echo $singleVehicle->getId();?>">Éditer</a>
+          <a class="waves-effect btn-large teal lighten-3 modal-trigger" href="index.php?delete=<?php echo $value['id'];?>">Supprimer</a>
           <!-- <a class="waves-effect btn-large orange darken-1 modal-trigger" href="#modal2">Supprimer</a> -->
         </div>
       </div>
@@ -61,7 +61,7 @@ include("template/header.php");
 
        <div class="input-field col s10">
          <input type="hidden" name="" value="<?php echo $singleVehicle->getId()?>">
-         <input class="waves-effect btn orange darken-1" value="Envoyer" type="submit" >
+         <input class="waves-effect btn teal lighten-3" value="Envoyer" type="submit" >
        </div>
 
      </form>

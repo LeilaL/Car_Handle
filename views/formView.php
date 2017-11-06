@@ -39,7 +39,7 @@ include('template/header.php');
       </div>
 
       <div class="input-field col s10">
-        <input class="waves-effect btn orange darken-1" value="Envoyer" type="submit" >
+        <input class="waves-effect btn teal lighten-3" value="Envoyer" type="submit" >
       </div>
 
     </form>

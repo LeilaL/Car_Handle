@@ -5,7 +5,7 @@ class VehicleManager {
 
 // CONNECTION BDD
   public function getBdd() {
-      $bdd = new PDO('mysql:host=localhost;dbname=Car_Handle;charset=utf8', 'root', '');
+      $bdd = new PDO('mysql:host=localhost;dbname=Car_Handle;charset=utf8', 'root', 'leilalababsa');
       return $bdd;
   }
 

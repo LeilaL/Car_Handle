@@ -1,5 +1,5 @@
 #footer, #header {
-  background-color: #546E7A;
+  background-color: #004d40;
 }
 
 #button {
@@ -7,9 +7,13 @@
 }
 
 strong {
-  color: #fb8c00;
+  color: #009688;
 }
 
 #return{
   margin-left: 20px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #4db6ac;
 }

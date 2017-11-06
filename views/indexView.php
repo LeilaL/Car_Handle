@@ -6,11 +6,11 @@
 <!-- VEHICULE CARD -->
    <div class="container-fluid">
      <div class="row">
-       <a id="button" class="waves-effect btn-large orange darken-1" href="form.php">Ajouter un véhicule</a></p>
+       <a id="button" class="waves-effect btn-large teal lighten-3" href="form.php">Ajouter un véhicule</a></p>
        <?php foreach ($show_vehicles as $infosvehicle) {
          ?>
          <div class="col s12 m4 l4">
-           <div class="card blue-grey darken-1">
+           <div class="card teal darken-4">
              <div class="card-content white-text">
                <span class="card-title"><strong>Véhicule</strong></span>
                <span class="card-title"><?php echo $infosvehicle->getType()?></span>
@@ -19,9 +19,9 @@
                <p><?php echo $infosvehicle->getColor()?></p>
              </div>
              <div class="card-action">
-               <a href="single.php?join=<?php echo $infosvehicle->getId()?>">Voir</a>
-               <a href="#modal<?php echo $infosvehicle->getId();?>">Éditer</a>
-               <a href="index.php?delete=<?php echo $value['id'];?>">Supprimer</a>
+               <a class="link" href="single.php?join=<?php echo $infosvehicle->getId()?>">Voir</a>
+               <a class="link" href="#modal<?php echo $infosvehicle->getId();?>">Éditer</a>
+               <a class="link" href="index.php?delete=<?php echo $value['id'];?>">Supprimer</a>
              </div>
            </div>
          </div>
